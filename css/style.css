@@ -1480,7 +1480,6 @@ table tbody tr:last-child td {
     -o-border-radius: 5px;
     border: 1px solid #ddd;
 }
-
 .social-info .social-box {
     position: relative;
     width: 100%;
@@ -1490,8 +1489,7 @@ table tbody tr:last-child td {
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
 }
-
-.social-info .social-box::before {
+.social-info .social-box::after {
     content: "\f099";
     font-family: "Font Awesome 6 Brands";
     position: absolute;
@@ -1509,16 +1507,18 @@ table tbody tr:last-child td {
     text-align: center;
     line-height: 1.5;
 }
-
-.social-info .social-box:nth-of-type(3)::before {
+.social-info .social-box:hover::after {
+    color: black;
+}
+.social-info .social-box:nth-of-type(3)::after {
     content: "\f39e";
 }
 
-.social-info .social-box:nth-of-type(4)::before {
+.social-info .social-box:nth-of-type(4)::after {
     content: "\f167";
 }
 
-.social-info .social-box:nth-of-type(5)::before {
+.social-info .social-box:nth-of-type(5)::after {
     content: "\f08c";
 }
 
