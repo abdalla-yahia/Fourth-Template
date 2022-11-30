@@ -11,8 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet" />
-    <link rel="icon" type="image/png" sizes="192x192"  href="./imgs/android-icon-192x192.png">
-    <title>Dachboard</title>
+    <link rel="icon" type="image/png" sizes="192x192"  href="../imgs/android-icon-192x192.png">
+    <title>Settings</title>
 </head>
 <body>
     <div class="container">
@@ -87,11 +87,142 @@
             </header>
             <!--End Header-->
             <!--Start Content-->
-            <h1 class="main-title">Dashboard</h1>
+            <h1 class="main-title">Settings</h1>
             <div class="content">
-                <div class="parent" style="background-color: red; height: 300px;">
+                <!--Start Sit Control-->
+                <div class="sit-control box">
+                    <div class="main-text">
+                        <h3>Site Control</h3>
+                        <p>Control The Website If There Is Maintenance</p>
+                    </div>
+                    <div class="control-box ">
+                        <div class="switch f">
+                            <div>
+                                <h3>Website Control</h3>
+                                <p>Open/Close Website And Type The Reason</p>
+                            </div>
+                            <div class="button-switch">
+                                <input checked id="che" type="checkbox" name=""><label for="che"></label>
+                            </div>
+                        </div>
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Close Message Content"></textarea>
+                    </div>
                 </div>
-                <div class="child" style="background-color: blue;  height: 250px;"></div>
+                <!--End Sit Control-->
+                <!--Start General Info-->
+                <div class="genral-info box">
+                    <div class="main-text">
+                        <h3>Genral Info</h3>
+                        <p>General Information About Your Account</p>
+                    </div>
+                    <form action="">
+                        <label for="first-name">First Name</label>
+                        <input type="text" name="F-name" id="first-name" placeholder="First Name">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" name="L-name" id="last-name" placeholder="Last Name">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="o@nn.sa">
+                        <a href="#">Change</a>
+                    
+                    
+                    </form>
+                </div>
+                <!--End General Info-->
+                <!--Start Security Info-->
+                <div class="security-info box">
+                    <div class="main-text">
+                        <h3>Security Info</h3>
+                        <p>Security Information About Your Account</p>
+                    </div>
+                    <div class="security-box ">
+                        <div class="f">
+                            <h4>Password<br/><p>Last Change On 25/10/2021</p></h4>
+                            <button>Change</button>
+                        </div>
+                        <div class="f">
+                            <h4>Two-Factor Authentication<br/><p>Enable/Disable The Feature</p></h4>
+                            <div class="button-switch">
+                                <input checked id="che1" type="checkbox" name=""><label for="che1"></label>
+                            </div>
+                        </div>
+                        <div class="f">
+                            <h4>Devices<br/><p>Check The Login Devices List</p></h4>
+                            <button>Devices</button>
+                        </div>
+                    </div>
+
+                </div>
+                <!--End Security Info-->
+                <!--Start Social Info-->
+                <div class="social-info box">
+                    <div class="main-text">
+                        <h3>Social Info</h3>
+                        <p>Social Media Information</p>
+                    </div>
+                    <div class="social-box">
+                        <input type="text" placeholder="Twitter Username">
+                    </div>
+                    <div class="social-box">
+                        <input type="text" placeholder="Facebook Username">
+                    </div>
+                    <div class="social-box">
+                        <input type="text" placeholder="Linkedin Username">
+                    </div>
+                    <div class="social-box">
+                        <input type="text" placeholder="Youtube Username">
+                    </div>
+                </div>
+                <!--End Social Info-->
+                <!--Start Widgets Control-->
+                <div class="widgets-control box">
+                <div class="main-text">
+                    <h3>Widgets Control</h3>
+                    <p>Show/Hide Widgets</p>
+                </div>
+                <input type="checkbox" id="quickDraft"> <label for="quickDraft">Quick Draft</label>
+                <input checked type="checkbox" id="YearlyTargets"> <label for="YearlyTargets">Yearly Targets</label>
+                <input checked type="checkbox" id="TicketsStatistics"> <label for="TicketsStatistics">Tickets Statistics</label>
+                <input type="checkbox" id="LatestNews"> <label for="LatestNews">Latest News</label>
+                <input checked type="checkbox" id="LatestTasks"> <label for="LatestTasks">Latest Tasks</label>
+                <input type="checkbox" id="TopSearchItems"> <label for="TopSearchItems">Top Search Items</label>
+                </div>
+                <!--End Widgets Control-->
+                <!--Start Backup Manger-->
+                <div class="backup-manger box">
+                    <div class="main-text">
+                        <h3>Backup Manager</h3>
+                        <p>Control Backup Time And Location</p>
+                    </div>
+                        <div class="backup-box">
+                            <div>
+                                <input type="radio" name="backup" id="daily">
+                                <label for="daily">Daily</label>
+                            </div>
+                            <div>
+                                <input checked type="radio" name="backup" id="weekly">
+                                <label for="weekly">Weekly</label>
+                            </div>
+                            <div> 
+                                <input type="radio" name="backup" id="monthly">
+                                <label for="monthly">Monthly</label>
+                            </div>
+                        </div>
+                        <div class="backup-box-foot f">
+                            <div class="f">
+                                <input type="radio" name="foot" id="megaman">
+                                <label for="megaman">Megaman</label>
+                            </div>
+                            <div class="f">
+                                <input checked type="radio" name="foot" id="zero">
+                                <label for="zero">Zero</label>
+                            </div>
+                            <div class="f">
+                                <input type="radio" name="foot" id="sigma">
+                                <label for="sigma">Sigma</label>
+                            </div>
+                        </div>
+                </div>
+                <!--End Backup Manger-->
             </div>
             <!--End Content-->
         </section>

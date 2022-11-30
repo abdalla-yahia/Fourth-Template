@@ -11,10 +11,13 @@ a {
     color: black;
     font-size: 14px
 }
+
 p {
     color: #888;
     padding-top: 10px;
+    font-size: 14px;
 }
+
 ul {
     list-style: none;
     margin: 0;
@@ -39,12 +42,12 @@ ul {
     --grey-color: #888;
     --white-color: white;
     --f6-color: #f6f6f6;
-    --body-color:#f1f5f9;
-    --section-color:#eeeeee;
+    --body-color: #f1f5f9;
+    --section-color: #eeeeee;
     --d777-color: rgba(34, 32, 32, 0.271);
     --eee-color: rgb(167, 167, 167);
     --main-transation: .3s;
-    --main-shdow:2px 2px 2px rgba(0,0,0,.1)
+    --main-shdow: 2px 2px 2px rgba(0, 0, 0, .1)
 }
 
 body {
@@ -97,6 +100,7 @@ body {
     -o-border-radius: 5px;
     left: 8%;
 }
+
 .main-title::after {
     content: '';
     position: absolute;
@@ -111,6 +115,7 @@ body {
     -o-border-radius: 5px;
     left: 8%;
 }
+
 .box {
     min-height: 400px;
     padding: 30px;
@@ -122,20 +127,24 @@ body {
     -o-border-radius: 15px;
     background-color: var(--white-color);
 }
+
 .content {
     padding: 30px 10px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(450px,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
     gap: 20px;
 }
+
 @media (max-width:550px) {
-    .content { 
+    .content {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         flex: 1;
         padding: 5px
     }
 }
-input,textarea {
+
+input,
+textarea {
     outline: none;
     border: none;
     box-shadow: none;
@@ -146,15 +155,106 @@ input::placeholder {
     color: var(--grey-color);
     font-size: 13px;
 }
+
 .main-text h3 {
     font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.main-text p {
     margin-bottom: 15px;
 }
+
 .f {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+/*Start Switch Button*/
+.button-switch {
+    position: relative;
+    padding: 20px 37px;
+}
+
+.button-switch input {
+    position: absolute;
+    right: 0px;
+    bottom: 10px;
+    transition: 1.5s;
+    -webkit-transition: 1.5s;
+    -moz-transition: 1.5s;
+    -ms-transition: 1.5s;
+    -o-transition: 1.5s;
+}
+
+.button-switch label {
+    width: 80px;
+    height: 30px;
+    position: absolute;
+    border-radius: 13px;
+    background-color: var(--eee-color);
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    -ms-border-radius: 13px;
+    -o-border-radius: 13px;
+    cursor: pointer;
+}
+
+.button-switch label::before {
+    font-family: "Font Awesome 6 Free";
+    content: "\f00d";
+    position: absolute;
+    font-weight: 900;
+    left: 5px;
+    background-color: var(--white-color);
+    top: 50%;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    color: var(--eee-color);
+}
+
+.button-switch input:checked+label {
+    background-color: var(--blue-color);
+}
+
+.button-switch span::before {
+    content: "\f005";
+    font-family: "Font Awesome 6 Free";
+    padding: 7px;
+    left: 0;
+    background-color: var(--white-color);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.button-switch input:checked+label::before {
+    left: calc(100% - 30px);
+    content: "\f00c";
+    color: var(--blue-color);
+}
+
+/*End Switch Button*/
 
 /*End Global*/
 /*#####################################################################
@@ -164,6 +264,7 @@ input::placeholder {
     height: 70px;
     background-color: var(--white-color)
 }
+
 .container section header nav {
     width: 100%;
     height: 70px;
@@ -171,10 +272,12 @@ input::placeholder {
     padding: 0 15px;
     position: relative
 }
+
 .info>img {
     width: 32px;
     height: 32px;
 }
+
 .info>i {
     position: relative;
     padding-right: 8px;
@@ -195,19 +298,23 @@ input::placeholder {
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
     animation: move 2s infinite linear;
-    -webkit-animation: move 2s infinite linear ;
+    -webkit-animation: move 2s infinite linear;
 }
+
 @keyframes move {
     0% {
-        outline: 0px solid rgba(245, 129, 129,.8);
+        outline: 0px solid rgba(245, 129, 129, .8);
     }
+
     100% {
-        outline: 10px solid rgba(245, 129, 129,.1);
+        outline: 10px solid rgba(245, 129, 129, .1);
     }
 }
+
 .info>img {
     margin-left: 5px;
 }
+
 .search>input {
     width: 140px;
     background-color: transparent;
@@ -218,9 +325,11 @@ input::placeholder {
     -ms-transition: var(--main-transation);
     -o-transition: var(--main-transation)
 }
+
 .search>input:focus {
     width: 180px
 }
+
 .search {
     position: relative;
     padding-left: 15px;
@@ -232,6 +341,7 @@ input::placeholder {
     -ms-border-radius: 8px;
     -o-border-radius: 8px
 }
+
 .search>i {
     position: absolute;
     top: 50%;
@@ -243,6 +353,7 @@ input::placeholder {
     -o-transform: translateY(-50%);
     color: var(--eee-color)
 }
+
 /*#####################################################################
 ######################### End Header ################################
 #######################################################################*/
@@ -257,11 +368,13 @@ input::placeholder {
     z-index: 99;
     max-width: 200px
 }
+
 .sidbar h1 {
     font-size: 20px;
     position: relative;
     padding-bottom: 15px
 }
+
 .sidbar h1::before {
     content: '';
     position: absolute;
@@ -276,6 +389,7 @@ input::placeholder {
     -ms-transform: translateX(-50%);
     -o-transform: translateX(-50%)
 }
+
 .sidbar h1::after {
     content: '';
     position: absolute;
@@ -296,15 +410,18 @@ input::placeholder {
     -ms-border-radius: 50%;
     -o-border-radius: 50%
 }
+
 @media (max-width:768px) {
     .sidbar h1 {
         font-size: 13px
     }
+
     .sidbar h1::before,
     .sidbar h1::after {
         display: none
     }
 }
+
 .dashboard {
     background-color: var(--f6-color);
     padding: 13px 0 13px 13px;
@@ -316,13 +433,16 @@ input::placeholder {
     justify-content: flex-start;
     margin-top: 30px
 }
+
 .dashboard i {
     margin-right: 10px
 }
+
 .sidbar ul {
     text-align: start;
     margin-top: 15px
 }
+
 .sidbar ul li {
     padding: 15px;
     transition: var(--main-transation);
@@ -331,7 +451,8 @@ input::placeholder {
     -ms-transition: var(--main-transation);
     -o-transition: var(--main-transation)
 }
-.sidbar ul >li:hover {
+
+.sidbar ul>li:hover {
     background-color: var(--f6-color);
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -339,22 +460,27 @@ input::placeholder {
     -ms-border-radius: 10px;
     -o-border-radius: 10px
 }
+
 .sidbar ul li .span {
     font-size: 14px;
     margin-left: 10px
 }
+
 .sidbar ul li>i {
     margin-right: 10px;
     cursor: pointer
 }
+
 @media (max-width:768px) {
     li>.span {
         display: none
     }
-.sidbar {
-    text-align: center;
-    padding: 0
-}
+
+    .sidbar {
+        text-align: center;
+        padding: 0
+    }
+
     .dashboard>a.span {
         display: none
     }
@@ -372,6 +498,7 @@ input::placeholder {
     justify-content: stretch;
     padding: 0;
 }
+
 .head {
     justify-content: space-between;
     align-items: flex-start;
@@ -388,14 +515,17 @@ input::placeholder {
 .head h3 {
     font-size: 22px;
 }
-.head > img {
+
+.head>img {
     max-width: 200px;
 }
+
 .profile {
     flex-direction: column;
     justify-content: space-between;
     width: 100%
 }
+
 .profile .img {
     text-align: start;
     width: 100%;
@@ -404,7 +534,8 @@ input::placeholder {
     padding-left: 30px;
     border: 1px solid var(--section-color)
 }
-.profile .img >img {
+
+.profile .img>img {
     width: 60px;
     border: 6px solid var(--f6-color);
     outline: 1px solid var(--white-color);
@@ -416,17 +547,20 @@ input::placeholder {
     position: absolute;
     top: -30px;
 }
+
 .profile ul {
     justify-content: space-between;
     width: 100%;
-    padding:20px 50px;
+    padding: 20px 50px;
     border: 1px solid var(--section-color);
 }
+
 .profile .pro {
     width: 100%;
     padding: 25px;
     text-align: end;
 }
+
 .pro a {
     background-color: var(--blue-alt-color);
     padding: 10px;
@@ -437,26 +571,32 @@ input::placeholder {
     -ms-border-radius: 8px 10px;
     -o-border-radius: 8px 10px;
 }
+
 .pro a:hover {
     background-color: var(--blue-alt-color);
 }
+
 @media (max-width:768px) {
-    .head > img{
+    .head>img {
         display: none;
     }
+
     .profile .img {
         text-align: center;
         padding: 0;
     }
-.profile ul {
-    flex-direction: column;
-    text-align: center;
-    padding-right: 0;
+
+    .profile ul {
+        flex-direction: column;
+        text-align: center;
+        padding-right: 0;
+    }
+
+    .profile ul li {
+        margin-bottom: 15px;
+    }
 }
-.profile ul li{
-    margin-bottom: 15px;
-}
-}
+
 /*#####################################################################
 ######################### End Welcome ################################
 #######################################################################*/
@@ -467,14 +607,15 @@ input::placeholder {
     flex-direction: column;
     align-items: flex-end;
 }
+
 .quick-draft form textarea {
     resize: none;
 }
+
 .quick-draft form input:not(:last-child),
-.quick-draft form textarea
-{
+.quick-draft form textarea {
     width: 100%;
-    background-color:var(--f6-color);
+    background-color: var(--f6-color);
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 10px;
@@ -484,10 +625,12 @@ input::placeholder {
     -ms-border-radius: 7px;
     -o-border-radius: 7px;
 }
+
 .quick-draft form input:not(:last-child)::placeholder,
 .quick-draft form textarea::placeholder {
     font-size: 12px;
 }
+
 .quick-draft form input:last-child {
     padding: 10px;
     border-radius: 10px;
@@ -498,9 +641,11 @@ input::placeholder {
     background-color: var(--blue-color);
     color: var(--white-color);
 }
+
 .quick-draft form input:last-child:hover {
     background-color: var(--blue-alt-color);
 }
+
 /*#####################################################################
 ######################### End Quick Draft ################################
 #######################################################################*/
@@ -514,13 +659,15 @@ input::placeholder {
     justify-content: space-evenly;
     height: 300px;
 }
-.yearly-target ul{
+
+.yearly-target ul {
     flex-direction: column;
     width: 100%;
     align-items: flex-start;
     padding-left: 10px;
     height: 300px;
 }
+
 .yearly-target ul li {
     display: block;
     height: 100px;
@@ -536,12 +683,14 @@ input::placeholder {
     background-color: var(--eee-color);
     position: relative;
 }
+
 ul .progres span {
     position: absolute;
     background-color: var(--blue-color);
     left: 0;
     height: 4px;
 }
+
 ul .progres span::before {
     content: attr(data-prog);
     position: absolute;
@@ -559,6 +708,7 @@ ul .progres span::before {
     text-align: center;
     font-size: 15px;
 }
+
 ul .progres span::after {
     content: "";
     position: absolute;
@@ -567,22 +717,26 @@ ul .progres span::after {
     border: 5px solid;
     border-color: #0075ff transparent transparent transparent;
 }
+
 ul li:nth-child(2) span,
-ul li:nth-child(2) span::before
- {
-    background-color:var(--orange-color) ;
+ul li:nth-child(2) span::before {
+    background-color: var(--orange-color);
 }
+
 ul li:nth-child(2) span::after {
-    border-color:var(--orange-color)  transparent transparent transparent;
+    border-color: var(--orange-color) transparent transparent transparent;
 }
+
 ul li:nth-child(3) span,
 ul li:nth-child(3) span::before {
-    background-color:var(--green-color) ;
+    background-color: var(--green-color);
 }
+
 ul li:nth-child(3) span::after {
-    border-color:var(--green-color)  transparent transparent transparent;
+    border-color: var(--green-color) transparent transparent transparent;
 
 }
+
 .icon-image i {
     width: 100px;
     height: 70px;
@@ -590,18 +744,22 @@ ul li:nth-child(3) span::after {
     line-height: 70px;
     margin-top: 15px;
 }
+
 .icon-image i:first-child {
     background-color: rgb(0 117 255 / 20%);
     color: var(--blue-alt-color);
 }
+
 .icon-image i:nth-child(2) {
     background-color: rgb(245 158 11 / 20%);
     color: var(--orange-color);
 }
+
 .icon-image i:last-child {
     background-color: rgb(34 197 94 / 20%);
     color: var(--green-color);
 }
+
 /*#####################################################################
 ######################### End Yearly Targets ###########################
 #######################################################################*/
@@ -609,10 +767,11 @@ ul li:nth-child(3) span::after {
 ######################### Start Tickets Statistics #######################
 #######################################################################*/
 .parent-tickets {
-   display: flex;
-   flex-wrap: wrap;
-   gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
+
 .tickets-box {
     min-width: 350px;
     flex: 1;
@@ -625,36 +784,45 @@ ul li:nth-child(3) span::after {
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
 }
+
 .tickets-box h4 {
     font-size: 33px;
 }
+
 .tickets-box i {
     margin-bottom: 15px;
 }
+
 .tickets-box:first-of-type i {
     color: var(--orange-color);
 }
+
 .tickets-box:nth-of-type(2) i {
     color: var(--blue-color);
 }
+
 .tickets-box:nth-of-type(3) i {
     color: var(--green-color);
 }
+
 .tickets-box:last-of-type i {
     color: var(--red-color);
 }
+
 @media (min-width:1150px) {
     .tickets-box {
         min-width: 200px;
     }
-    
+
 }
+
 @media (max-width:500px) {
     .tickets-box {
         min-width: 200px;
     }
-    
+
 }
+
 /*#####################################################################
 ######################### End Tickets Statistics #######################
 #######################################################################*/
@@ -667,9 +835,11 @@ ul li:nth-child(3) span::after {
     margin: 30px 0;
     padding-bottom: 10px;
 }
+
 .news-box:not(:last-child) {
     border-bottom: 1px solid var(--f6-color);
 }
+
 .news-box img {
     border-radius: 7px;
     -webkit-border-radius: 7px;
@@ -677,6 +847,7 @@ ul li:nth-child(3) span::after {
     -ms-border-radius: 7px;
     -o-border-radius: 7px;
 }
+
 .news-box span {
     padding: 7px;
     font-size: 14px;
@@ -687,12 +858,14 @@ ul li:nth-child(3) span::after {
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
 }
+
 @media (max-width:767px) {
     .news-box {
         flex-direction: column;
         text-align: center;
     }
 }
+
 /*#####################################################################
 ######################### End Latest News #######################
 #######################################################################*/
@@ -704,24 +877,30 @@ ul li:nth-child(3) span::after {
     margin-bottom: 20px;
     padding-bottom: 10px;
 }
-.task  h3 {
+
+.task h3 {
     font-size: 16px;
 }
+
 .task:nth-of-type(5) {
     opacity: .4;
 }
+
 .task:nth-of-type(5) h3,
 .task:nth-of-type(5) p {
     text-decoration-line: line-through;
     -moz-text-decoration-line: line-through;
 }
+
 .task:not(:last-child) {
     border-bottom: 1px solid var(--f6-color);
 }
+
 .task i:hover {
     color: var(--red-color);
     cursor: pointer;
 }
+
 /*#####################################################################
 ######################### End Latest Tsks #######################
 #######################################################################*/
@@ -732,15 +911,18 @@ ul li:nth-child(3) span::after {
     justify-content: space-between;
     margin: 15px 0;
 }
+
 .srarch-box {
     justify-content: space-between;
     margin-bottom: 15px;
     padding-bottom: 15px;
 }
+
 .srarch-box h3 {
     font-size: 15px;
     font-weight: 400;
 }
+
 .srarch-box span {
     padding: 8px 10px;
     font-size: 13px;
@@ -752,6 +934,7 @@ ul li:nth-child(3) span::after {
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
 }
+
 /*#####################################################################
 ######################### End Top Search  #######################
 #######################################################################*/
@@ -763,16 +946,20 @@ ul li:nth-child(3) span::after {
     margin-bottom: 15px;
     padding-bottom: 10px;
 }
+
 .upload-box:not(:last-child) {
     border-bottom: 1px solid var(--f6-color);
 }
+
 .file-upload img {
     width: 45px;
     margin-right: 10px;
 }
+
 .file-upload h3 {
     font-size: 15px;
 }
+
 .upload-box span {
     padding: 10px;
     background-color: var(--f6-color);
@@ -782,6 +969,7 @@ ul li:nth-child(3) span::after {
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
 }
+
 /*#####################################################################
 ######################### End Latest Upload  #######################
 #######################################################################*/
@@ -791,18 +979,21 @@ ul li:nth-child(3) span::after {
 .last-project-progress {
     position: relative;
 }
-.last-project-progress img{
+
+.last-project-progress img {
     position: absolute;
     right: 10px;
     bottom: 15px;
     opacity: .17;
     max-width: 200px;
 }
+
 @media (max-width:767px) {
     .last-project-progress img {
         display: none;
     }
 }
+
 .project-step {
     font-size: 18px;
     font-weight: 500;
@@ -811,6 +1002,7 @@ ul li:nth-child(3) span::after {
     padding-left: 30px;
     position: relative;
 }
+
 .project-step::before {
     content: "";
     position: absolute;
@@ -832,13 +1024,16 @@ ul li:nth-child(3) span::after {
     border: 2px solid var(--white-color);
     outline: 2px solid var(--blue-alt-color);
 }
+
 .project-step:last-of-type::before {
     background-color: var(--white-color);
 }
-.project-step:nth-of-type(5)::before{
+
+.project-step:nth-of-type(5)::before {
     animation: changeBG 1.2s infinite linear;
     -webkit-animation: changeBG 1.2s infinite linear;
 }
+
 .project-step:not(:last-of-type)::after {
     content: '';
     position: absolute;
@@ -848,25 +1043,31 @@ ul li:nth-child(3) span::after {
     height: 34px;
     background-color: var(--blue-color);
 }
+
 @media (max-width:767px) {
     .project-step {
-    font-size: 14px;
+        font-size: 14px;
     }
+
     .project-step:not(:last-of-type)::after {
         height: 32px;
     }
+
     .project-step:last-of-type::before {
         border-width: 3px;
     }
 }
+
 @keyframes changeBG {
     0% {
         background-color: var(--white-color);
     }
-    100%{
+
+    100% {
         background-color: var(--blue-color);
     }
 }
+
 /*#####################################################################
 ######################### End Project Progress  #######################
 #######################################################################*/
@@ -878,9 +1079,11 @@ ul li:nth-child(3) span::after {
     padding-left: 30px;
     margin-bottom: 25px;
 }
+
 .box-reminder p {
     font-size: small;
 }
+
 .box-reminder::after {
     content: "";
     position: absolute;
@@ -900,6 +1103,7 @@ ul li:nth-child(3) span::after {
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
 }
+
 .box-reminder::before {
     content: "";
     position: absolute;
@@ -909,29 +1113,34 @@ ul li:nth-child(3) span::after {
     width: 2px;
     background-color: var(--blue-alt-color);
 }
+
 .box-reminder.col-1::before,
 .box-reminder.col-1::after {
     background-color: var(--green-color);
 }
+
 .box-reminder.col-2::before,
 .box-reminder.col-2::after {
     background-color: var(--orange-color);
 }
+
 .box-reminder.col-3::before,
 .box-reminder.col-3::after {
     background-color: var(--red-color);
 }
+
 /*#####################################################################
 ######################### End Remeinders  #######################
 #######################################################################*/
 /*#####################################################################
 ######################### Start Latest Post  #######################
 #######################################################################*/
-.post-info{
+.post-info {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
 }
+
 .post-img {
     margin-bottom: 30px;
     padding-bottom: 30px;
@@ -939,15 +1148,18 @@ ul li:nth-child(3) span::after {
     width: 100%;
     justify-content: flex-start;
 }
+
 .post-img img {
     margin-right: 20px;
 }
-.post-info > p {
-line-height: 1.7;
-letter-spacing: 1px;
-margin-bottom: 25px;
-color: black;
+
+.post-info>p {
+    line-height: 1.7;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    color: black;
 }
+
 .post-likes {
     width: 100%;
     justify-content: space-between;
@@ -955,6 +1167,7 @@ color: black;
     color: var(--eee-color);
     border-top: 1px solid var(--f6-color);
 }
+
 /*#####################################################################
 ######################### End Latest Post  #######################
 #######################################################################*/
@@ -969,7 +1182,8 @@ color: black;
     margin-bottom: 10px;
     padding-right: 10px;
 }
-.image-social i{
+
+.image-social i {
     background-color: #1da1f2;
     width: 52px;
     height: 56px;
@@ -984,6 +1198,7 @@ color: black;
     -ms-transition: var(--main-transation);
     -o-transition: var(--main-transation);
 }
+
 .image-social i:hover {
     transform: rotate(5deg);
     -webkit-transform: rotate(5deg);
@@ -992,9 +1207,11 @@ color: black;
     -o-transform: rotate(5deg);
 
 }
+
 .image-social p {
     color: var(--blue-alt-color);
 }
+
 .social a {
     padding: 7px;
     color: var(--white-color);
@@ -1005,21 +1222,26 @@ color: black;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
 }
+
 .social:nth-of-type(4) {
     background-color: rgb(255 0 0 / 20%);
 }
+
 .social:nth-of-type(3)>a,
-.social:nth-of-type(3) .image-social>i{
-    background-color:#1877f2;
+.social:nth-of-type(3) .image-social>i {
+    background-color: #1877f2;
 }
+
 .social:nth-of-type(4)>a,
-.social:nth-of-type(4) .image-social>i{
-    background-color:#ff0000;
+.social:nth-of-type(4) .image-social>i {
+    background-color: #ff0000;
 }
+
 .social:nth-of-type(5)>a,
-.social:nth-of-type(5) .image-social>i{
-    background-color:#0077b5;
+.social:nth-of-type(5) .image-social>i {
+    background-color: #0077b5;
 }
+
 /*#####################################################################
 ######################### End Social Media  #######################
 #######################################################################*/
@@ -1036,33 +1258,40 @@ color: black;
     box-shadow: none;
     margin: 10px;
 }
-table{
+
+table {
     border: 1px solid var(--f6-color);
     background-color: var(--white-color);
     border-spacing: 0;
     width: 1090px;
     position: absolute;
 }
-table td { 
-border-top: 1px solid #eee;
-border-left: 1px solid #eee;
-padding: 10px 30px;
-text-align: center;
+
+table td {
+    border-top: 1px solid #eee;
+    border-left: 1px solid #eee;
+    padding: 10px 30px;
+    text-align: center;
 }
+
 table tr:hover {
     background-color: var(--f6-color);
 }
-table tbody td:last-child{
+
+table tbody td:last-child {
     border-right: 1px solid #eee;
 }
-table tbody tr:last-child td{
+
+table tbody tr:last-child td {
     border-bottom: 1px solid #eee;
 }
-.projects-table table thead td{
+
+.projects-table table thead td {
     background-color: var(--f6-color);
     padding: 20px 30px;
     border: none;
 }
+
 .projects-table table td>img {
     border-radius: 50%;
     width: 35px;
@@ -1072,13 +1301,15 @@ table tbody tr:last-child td{
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
 }
-.projects-table table td>img:not(:first-of-type){
+
+.projects-table table td>img:not(:first-of-type) {
     margin-left: -20px;
 }
-.projects-table table td> a {
+
+.projects-table table td>a {
     background-color: var(--green-color);
     color: var(--white-color);
-    font-size:small ;
+    font-size: small;
     padding: 4px;
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -1086,15 +1317,412 @@ table tbody tr:last-child td{
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
 }
+
 .projects-table table tbody tr:nth-child(1) a {
-    background-color:var(--orange-color);
+    background-color: var(--orange-color);
 }
+
 .projects-table table tbody tr:nth-child(2) a {
-    background-color:var(--blue-color);
+    background-color: var(--blue-color);
 }
+
 .projects-table table tbody tr:nth-child(5) a {
-    background-color:var(--red-color);
+    background-color: var(--red-color);
 }
+
 /*#####################################################################
 ######################### End Projects Table  #######################
+#######################################################################*/
+
+/***********************************************************************
+************************************************************************
+************************ Start Setting Page *******************************
+**************************************************************************
+**************************************************************************/
+
+/*#####################################################################
+######################### Start Site Control  #######################
+#######################################################################*/
+.sit-control .main-text {
+    margin-bottom: 20px;
+}
+
+.sit-control .main-text h3 {
+    margin-bottom: 5px;
+}
+
+.switch h3 {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.switch {
+    justify-content: space-between;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.control-box textarea {
+    resize: none;
+    width: 100%;
+    background-color: var(--white-color);
+    padding: 10px;
+    border: 1px solid var(--eee-color);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.control-box textarea::placeholder {
+    font-size: smaller;
+}
+
+/*#####################################################################
+######################### End Site Control  #######################
+#######################################################################*/
+/*#####################################################################
+######################### Start Genral Info  #######################
+#######################################################################*/
+.genral-info form input:not(:nth-of-type(3)),
+.genral-info form label {
+    display: block;
+    width: 100%;
+}
+
+.genral-info form label,
+.genral-info p {
+    margin-bottom: 10px;
+}
+
+.genral-info form input {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid var(--eee-color);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.genral-info form input:nth-of-type(3) {
+    background-color: #ddd;
+    width: 70%;
+    margin-right: 20px;
+}
+
+.genral-info form a {
+    color: var(--blue-alt-color);
+    font-size: 18px;
+}
+
+/*#####################################################################
+######################### End Genral Info  #######################
+#######################################################################*/
+/*#####################################################################
+######################### Start Security Info  #######################
+#######################################################################*/
+.security-box div {
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+}
+
+.security-box div:not(:last-of-type) {
+    border-bottom: 1px solid #eee;
+}
+
+.security-box div>h4 {
+    font-weight: 400;
+}
+
+.security-box div button {
+    padding: 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: var(--blue-color);
+    color: var(--white-color);
+}
+
+.security-box div:last-child button {
+    background-color: var(--eee-color);
+}
+
+/*#####################################################################
+######################### End Security Info  #######################
+#######################################################################*/
+/*#####################################################################
+######################### Start Social Info  #######################
+#######################################################################*/
+.social-box {
+    height: 40px;
+    margin-bottom: 30px;
+}
+
+.social-info .social-box input {
+    display: block;
+    width: 100%;
+    background-color: #eee;
+    padding-left: 60px;
+    height: 100%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.social-info .social-box {
+    position: relative;
+    width: 100%;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.social-info .social-box::before {
+    content: "\f099";
+    font-family: "Font Awesome 6 Brands";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 95%;
+    width: 39px;
+    background-color: #eee;
+    border: 1px solid #ddd;
+    font-weight: 400;
+    color: #777;
+    font-size: 25px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.social-info .social-box:nth-of-type(3)::before {
+    content: "\f39e";
+}
+
+.social-info .social-box:nth-of-type(4)::before {
+    content: "\f167";
+}
+
+.social-info .social-box:nth-of-type(5)::before {
+    content: "\f08c";
+}
+
+/*#####################################################################
+######################### End Social Info  #######################
+#######################################################################*/
+/*#####################################################################
+######################### Start Widgets Control  #######################
+#######################################################################*/
+.widgets-control input {
+    border: none;
+    outline: none;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    padding: 20px;
+    position: absolute;
+    z-index: -1;
+}
+
+.widgets-control label {
+    width: 160px;
+    height: 50px;
+    cursor: pointer;
+    padding: 10px;
+    padding-left: 50px;
+    position: relative;
+    display: block;
+    width: fit-content;
+}
+
+.widgets-control label::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 40%;
+    transform: translateY(-50%);
+    width: 12px;
+    border-radius: 7px;
+    height: 12px;
+    border: 3px solid var(--blue-color);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+
+.widgets-control label::before {
+    content: "\f00c";
+    font-weight: 900;
+    font-family: "Font Awesome 6 Free";
+    color: var(--white-color);
+    left: 1px;
+    top: 25%;
+    text-align: center;
+    line-height: 15px;
+    width: 15px;
+    transform: scale(0) rotate(360deg);
+    position: absolute;
+    border-radius: 7px;
+    height: 17px;
+    transition: .3s;
+    background-color: var(--blue-color);
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    -webkit-transform: scale(0) rotate(360deg);
+    -moz-transform: scale(0) rotate(360deg);
+    -ms-transform: scale(0) rotate(360deg);
+    -o-transform: scale(0) rotate(360deg);
+}
+
+.widgets-control input:checked+label::before {
+    transform: scale(1) rotate(-360deg);
+    -webkit-transform: scale(1) rotate(-360deg);
+    -moz-transform: scale(1) rotate(-360deg);
+    -ms-transform: scale(1) rotate(-360deg);
+    -o-transform: scale(1) rotate(-360deg);
+}
+
+/*#####################################################################
+######################### End Widgets Control  #######################
+#######################################################################*/
+/*#####################################################################
+######################### Start Backup Manger  #######################
+#######################################################################*/
+.backup-box {
+    border-bottom: 1px solid #eee;
+}
+.backup-box div {
+    margin-bottom: 20px;
+    padding-left: 30px;
+}
+.backup-box div label {
+    margin-left: 30px;
+    font-size: 25px;
+    cursor: pointer;
+    position: relative;
+}
+.backup-box div input {
+display: none;
+}
+.backup-box div label::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid var(--grey-color);
+    left: -54px;
+    top: 7px;
+}
+
+.backup-box div label::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: var(--blue-color);
+    border-radius: 50%;
+    left: -49px;
+    top: 12px;
+    transition: .5s;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+
+.backup-box div input:checked+label::after {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+.backup-box div input:checked+label::before {
+    border-color: var(--blue-color);
+}
+.backup-box-foot {
+    justify-content: space-evenly;
+    margin-top: 30px;
+    padding-top: 50px;
+}
+.backup-box-foot div {
+    width: 30% ;
+    height: 150px;
+}
+.backup-box-foot div input {
+    display: none;
+}
+.backup-box-foot div label {
+    padding: 30px;
+    border: 1px solid #888;
+    position: relative;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+}
+.backup-box-foot div label::before {
+    content:"\f233";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+.backup-box-foot div input:checked+label {
+    border-color:var(--blue-color);
+    border-width: 2px;
+    color: var(--blue-color);
+}
+.backup-box-foot div input:checked+label::before {
+    color: var(--blue-color);
+}
+@media (max-width:767px) {
+    .backup-box-foot{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .backup-box-foot div {
+        width: 90%;
+    }
+}
+/*#####################################################################
+######################### End Backup Manger  #######################
 #######################################################################*/
