@@ -146,7 +146,8 @@ input::placeholder {
     color: var(--grey-color);
     font-size: 13px;
 }
-.main-text {
+.main-text h3 {
+    font-size: 25px;
     margin-bottom: 15px;
 }
 .f {
@@ -254,7 +255,6 @@ input::placeholder {
     text-align: center;
     padding: 20px;
     z-index: 99;
-    height: 1000vh;
     max-width: 200px
 }
 .sidbar h1 {
@@ -657,4 +657,444 @@ ul li:nth-child(3) span::after {
 }
 /*#####################################################################
 ######################### End Tickets Statistics #######################
+#######################################################################*/
+/*#####################################################################
+######################### Start Latest News #######################
+#######################################################################*/
+
+.news-box {
+    justify-content: space-between;
+    margin: 30px 0;
+    padding-bottom: 10px;
+}
+.news-box:not(:last-child) {
+    border-bottom: 1px solid var(--f6-color);
+}
+.news-box img {
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+.news-box span {
+    padding: 7px;
+    font-size: 14px;
+    background-color: var(--f6-color);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+@media (max-width:767px) {
+    .news-box {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/*#####################################################################
+######################### End Latest News #######################
+#######################################################################*/
+/*#####################################################################
+######################### Start Latest Tsks #######################
+#######################################################################*/
+.task {
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+.task  h3 {
+    font-size: 16px;
+}
+.task:nth-of-type(5) {
+    opacity: .4;
+}
+.task:nth-of-type(5) h3,
+.task:nth-of-type(5) p {
+    text-decoration-line: line-through;
+    -moz-text-decoration-line: line-through;
+}
+.task:not(:last-child) {
+    border-bottom: 1px solid var(--f6-color);
+}
+.task i:hover {
+    color: var(--red-color);
+    cursor: pointer;
+}
+/*#####################################################################
+######################### End Latest Tsks #######################
+#######################################################################*/
+/*#####################################################################
+######################### Start Top Search  #######################
+#######################################################################*/
+.keyword {
+    justify-content: space-between;
+    margin: 15px 0;
+}
+.srarch-box {
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+.srarch-box h3 {
+    font-size: 15px;
+    font-weight: 400;
+}
+.srarch-box span {
+    padding: 8px 10px;
+    font-size: 13px;
+    font-weight: 400;
+    background-color: var(--f6-color);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+/*#####################################################################
+######################### End Top Search  #######################
+#######################################################################*/
+/*#####################################################################
+######################### Start Latest Upload  #######################
+#######################################################################*/
+.upload-box {
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+}
+.upload-box:not(:last-child) {
+    border-bottom: 1px solid var(--f6-color);
+}
+.file-upload img {
+    width: 45px;
+    margin-right: 10px;
+}
+.file-upload h3 {
+    font-size: 15px;
+}
+.upload-box span {
+    padding: 10px;
+    background-color: var(--f6-color);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+/*#####################################################################
+######################### End Latest Upload  #######################
+#######################################################################*/
+/*#####################################################################
+######################### Start Project Progress  #######################
+#######################################################################*/
+.last-project-progress {
+    position: relative;
+}
+.last-project-progress img{
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+    opacity: .17;
+    max-width: 200px;
+}
+@media (max-width:767px) {
+    .last-project-progress img {
+        display: none;
+    }
+}
+.project-step {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 35px;
+    margin-left: 30px;
+    padding-left: 30px;
+    position: relative;
+}
+.project-step::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--blue-color);
+    top: 50%;
+    left: -15px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 2px solid var(--white-color);
+    outline: 2px solid var(--blue-alt-color);
+}
+.project-step:last-of-type::before {
+    background-color: var(--white-color);
+}
+.project-step:nth-of-type(5)::before{
+    animation: changeBG 1.2s infinite linear;
+    -webkit-animation: changeBG 1.2s infinite linear;
+}
+.project-step:not(:last-of-type)::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    left: -4px;
+    bottom: -36px;
+    height: 34px;
+    background-color: var(--blue-color);
+}
+@media (max-width:767px) {
+    .project-step {
+    font-size: 14px;
+    }
+    .project-step:not(:last-of-type)::after {
+        height: 32px;
+    }
+    .project-step:last-of-type::before {
+        border-width: 3px;
+    }
+}
+@keyframes changeBG {
+    0% {
+        background-color: var(--white-color);
+    }
+    100%{
+        background-color: var(--blue-color);
+    }
+}
+/*#####################################################################
+######################### End Project Progress  #######################
+#######################################################################*/
+/*#####################################################################
+######################### Start Remeinders  #######################
+#######################################################################*/
+.box-reminder {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 25px;
+}
+.box-reminder p {
+    font-size: small;
+}
+.box-reminder::after {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: var(--blue-alt-color);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.box-reminder::before {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background-color: var(--blue-alt-color);
+}
+.box-reminder.col-1::before,
+.box-reminder.col-1::after {
+    background-color: var(--green-color);
+}
+.box-reminder.col-2::before,
+.box-reminder.col-2::after {
+    background-color: var(--orange-color);
+}
+.box-reminder.col-3::before,
+.box-reminder.col-3::after {
+    background-color: var(--red-color);
+}
+/*#####################################################################
+######################### End Remeinders  #######################
+#######################################################################*/
+/*#####################################################################
+######################### Start Latest Post  #######################
+#######################################################################*/
+.post-info{
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.post-img {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--f6-color);
+    width: 100%;
+    justify-content: flex-start;
+}
+.post-img img {
+    margin-right: 20px;
+}
+.post-info > p {
+line-height: 1.7;
+letter-spacing: 1px;
+margin-bottom: 25px;
+color: black;
+}
+.post-likes {
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 30px;
+    color: var(--eee-color);
+    border-top: 1px solid var(--f6-color);
+}
+/*#####################################################################
+######################### End Latest Post  #######################
+#######################################################################*/
+/*#####################################################################
+######################### Start Social Media  #######################
+#######################################################################*/
+.social {
+    width: 100%;
+    height: 56px;
+    background-color: rgb(29 161 242 / 20%);
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding-right: 10px;
+}
+.image-social i{
+    background-color: #1da1f2;
+    width: 52px;
+    height: 56px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 60px;
+    margin-right: 20px;
+    color: var(--white-color);
+    transition: var(--main-transation);
+    -webkit-transition: var(--main-transation);
+    -moz-transition: var(--main-transation);
+    -ms-transition: var(--main-transation);
+    -o-transition: var(--main-transation);
+}
+.image-social i:hover {
+    transform: rotate(5deg);
+    -webkit-transform: rotate(5deg);
+    -moz-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+
+}
+.image-social p {
+    color: var(--blue-alt-color);
+}
+.social a {
+    padding: 7px;
+    color: var(--white-color);
+    background-color: #1da1f2;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.social:nth-of-type(4) {
+    background-color: rgb(255 0 0 / 20%);
+}
+.social:nth-of-type(3)>a,
+.social:nth-of-type(3) .image-social>i{
+    background-color:#1877f2;
+}
+.social:nth-of-type(4)>a,
+.social:nth-of-type(4) .image-social>i{
+    background-color:#ff0000;
+}
+.social:nth-of-type(5)>a,
+.social:nth-of-type(5) .image-social>i{
+    background-color:#0077b5;
+}
+/*#####################################################################
+######################### End Social Media  #######################
+#######################################################################*/
+/*#####################################################################
+######################### Start Projects Table  #######################
+#######################################################################*/
+.projects-table {
+    overflow-x: scroll;
+    max-width: 100%;
+    position: relative;
+    height: 525px;
+    max-height: auto;
+    padding: 20px;
+    box-shadow: none;
+    margin: 10px;
+}
+table{
+    border: 1px solid var(--f6-color);
+    background-color: var(--white-color);
+    border-spacing: 0;
+    width: 1090px;
+    position: absolute;
+}
+table td { 
+border-top: 1px solid #eee;
+border-left: 1px solid #eee;
+padding: 10px 30px;
+text-align: center;
+}
+table tr:hover {
+    background-color: var(--f6-color);
+}
+table tbody td:last-child{
+    border-right: 1px solid #eee;
+}
+table tbody tr:last-child td{
+    border-bottom: 1px solid #eee;
+}
+.projects-table table thead td{
+    background-color: var(--f6-color);
+    padding: 20px 30px;
+    border: none;
+}
+.projects-table table td>img {
+    border-radius: 50%;
+    width: 35px;
+    border: 2px solid var(--white-color);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.projects-table table td>img:not(:first-of-type){
+    margin-left: -20px;
+}
+.projects-table table td> a {
+    background-color: var(--green-color);
+    color: var(--white-color);
+    font-size:small ;
+    padding: 4px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.projects-table table tbody tr:nth-child(1) a {
+    background-color:var(--orange-color);
+}
+.projects-table table tbody tr:nth-child(2) a {
+    background-color:var(--blue-color);
+}
+.projects-table table tbody tr:nth-child(5) a {
+    background-color:var(--red-color);
+}
+/*#####################################################################
+######################### End Projects Table  #######################
 #######################################################################*/
