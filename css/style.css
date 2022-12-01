@@ -1857,6 +1857,10 @@ background-color: var(--blue-color);
 {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
+.content.friends-content .friend-foot a {
+    padding: 5px;
+    margin: 0;
+}
 }
 .courses {
     position: relative;
