@@ -135,7 +135,7 @@ body {
     gap: 20px;
 }
 
-@media (max-width:550px) {
+@media (max-width:555px) {
     .content {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         flex: 1;
@@ -1845,6 +1845,73 @@ background-color: var(--blue-color);
 ************************ Start Courses Page *******************************
 **************************************************************************
 **************************************************************************/
-
-
-
+.content.cources-content {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.courses {
+    position: relative;
+    padding: 0;
+}
+.courses > img {
+    width: 70px;
+    position: absolute;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    left: 25px;
+    top: 25px;
+    border: 2px solid white;
+}
+.courses .image-course {
+    width: 100%;
+    max-height: 50%;
+}
+.courses .image-course img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.courses .content-text-info {
+    width: 100%;
+    padding: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    position: relative;
+    border-bottom: 1px solid #eee;
+}
+.courses .content-text-info h4{
+margin-top: 10px;
+}
+.courses .content-text-info p{
+    max-width: 100%;
+    font-size: small;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+.courses .content-text-info::before {
+    content: "Course Info";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    background-color: var(--blue-color);
+    color: var(--white-color);
+    padding: 5px;
+    font-size: small;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.courses .courses-foot {
+    justify-content: space-between;
+    padding: 15px;
+    color: #777;
+}
