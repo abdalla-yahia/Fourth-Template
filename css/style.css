@@ -1867,16 +1867,15 @@ justify-content: space-evenly;
 .information-col-1 h4 {
     font-weight: 400;
 }
+
 .on-off-button {
-    width: 100%;
+    width: 90%;
     height: 30px;
     margin: 25px 0;
     position: absolute;
     bottom: -20px;
     left: 15px;
-
 }
-
 .on-off-button input {
     display: none;
 }
@@ -1936,8 +1935,7 @@ justify-content: space-evenly;
     content: "\f00c";
     position: absolute;
 }
-.information-col-2 >p, 
-.information-col-3 >p {
+.information-col-2 >p {
     padding: 0;
     margin: 5px;
 }
@@ -1984,6 +1982,20 @@ justify-content: space-evenly;
         grid-template-areas: "pa pa pa pa pa pa "
             "c c c c c c " 
             "h h h h h h ";
+    } 
+    .profile-up .profile-up-content-box {
+        padding:40px 10px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .information-col-1,
+    .information-col-2 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .profile-up {
         flex-direction: column;
