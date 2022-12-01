@@ -1851,6 +1851,13 @@ background-color: var(--blue-color);
 {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
+@media (max-width:767px) {
+    .content.cources-content,
+    .content.friends-content
+{
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+}
 .courses {
     position: relative;
     padding: 0;
