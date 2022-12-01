@@ -60,7 +60,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background-color: var(--f6-color);
+    background-color: var(--white-color);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -878,25 +878,23 @@ ul li:nth-child(3) span::after {
     margin-bottom: 20px;
     padding-bottom: 10px;
 }
-
+.task > i {
+    text-align: right;
+}
 .task h3 {
     font-size: 16px;
 }
-
 .task:nth-of-type(5) {
     opacity: .4;
 }
-
 .task:nth-of-type(5) h3,
 .task:nth-of-type(5) p {
     text-decoration-line: line-through;
     -moz-text-decoration-line: line-through;
 }
-
 .task:not(:last-child) {
     border-bottom: 1px solid var(--f6-color);
 }
-
 .task i:hover {
     color: var(--red-color);
     cursor: pointer;
@@ -2146,7 +2144,8 @@ max-height: 450px;
 .files-child i{
 color: #777;
 }
-.uploader, i {
+.uploader,
+.files-child > i {
     text-align: start;
     width: 100%;
     margin-bottom: 15px;
