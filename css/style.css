@@ -423,7 +423,6 @@ input::placeholder {
 }
 
 .dashboard {
-    background-color: var(--f6-color);
     padding: 13px 0 13px 13px;
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -444,7 +443,8 @@ input::placeholder {
 }
 
 .sidbar ul li {
-    padding: 15px;
+    padding: 10px;
+    margin-bottom: 8px;
     transition: var(--main-transation);
     -webkit-transition: var(--main-transation);
     -moz-transition: var(--main-transation);
@@ -452,6 +452,7 @@ input::placeholder {
     -o-transition: var(--main-transation)
 }
 
+.active,
 .sidbar ul>li:hover {
     background-color: var(--f6-color);
     border-radius: 10px;
@@ -1974,12 +1975,13 @@ font-weight: 900;
 }
 .friend-data > span {
     color: var(--red-color);
-    font-size: 50px;
+    font-size: 40px;
     position: absolute;
     right: 10px;
     bottom: 20px;
     font-weight: 700;
     opacity: .2;
+    text-transform: uppercase;
 }
 .friend-data {
     border-bottom: 1px solid #eee;
