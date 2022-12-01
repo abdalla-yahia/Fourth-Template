@@ -2029,18 +2029,22 @@ font-weight: 900;
     grid-template-columns: 1fr auto;
     gap: 18px;
 }
+
+.files-parent {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(250px , 1fr));
+gap: 18px;
+padding-left: 15px;
+}
 @media (max-width:767px) {
 .files-content {
         display: flex;
         flex-direction: column-reverse;
         justify-content: center;
     }
-}
-.files-parent {
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(250px , 1fr));
-gap: 18px;
-padding-left: 15px;
+    .files-parent {
+        padding-left: 0;
+    }
 }
 .files-statices {
 padding: 10px;
