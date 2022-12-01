@@ -2028,7 +2028,6 @@ font-weight: 900;
 **************************************************************************/
 .files-content {
     display: grid;
-    /* align-items: flex-start; */
     grid-template-columns: 1fr auto;
     gap: 18px;
 }
@@ -2159,3 +2158,120 @@ color: #777;
     border-top: 2px solid #eee;
     padding-top: 8px;
 }
+/***********************************************************************
+************************************************************************
+************************ Start Files Page *******************************
+**************************************************************************
+**************************************************************************/
+.plans {
+    padding: 15px;
+}
+.head-plan {
+    width: 100%;
+    background-color: var(--green-color);
+    height: 150px;
+    border: 3px solid var(--white-color);
+    outline: 3px solid var(--green-color);
+    flex-direction: column;
+    color: var(--white-color);
+}
+.head-plan >span{
+    font-size: 25px;
+}
+.head-plan h3 {
+font-size: 40px;
+position: relative;
+font-weight: 500;
+}
+.head-plan h3 span {
+    font-size: 25px;
+    top: -10px;
+    left: -20px;
+    position: absolute;
+}
+.plans ul {
+    padding: 20px 20px 20px 0;
+}
+.plans ul li{
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    position: relative;
+}
+
+.plans ul li::before {
+    content: "\f00d";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    padding-right: 10px;
+    color: var(--red-color);
+}
+.plans ul li::after {
+    content: "\f05a";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    padding-right: 10px;
+    color: var(--gray-color);
+    position: absolute;
+    right: 0;
+    opacity: .5;
+    cursor: pointer;
+}
+.plans ul li:nth-child(1)::before ,
+.plans ul li:nth-child(2)::before ,
+.plans ul li:nth-child(3)::before 
+{
+    content: "\f00c";
+    color: var(--green-color);
+}
+.plans > a {
+    padding: 7px 25px;
+    color: var(--white-color);
+    font-size: 18px;
+    background-color: var(--green-color);
+    margin-bottom: 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.plans.pl-2 .head-plan,
+.plans.pl-2 >a {
+    background-color: var(--blue-color);
+    outline-color: var(--blue-color);
+}
+.plans.pl-2 li::before,
+.plans.pl-3 li::before
+{
+    content: "\f00c";
+    color: var(--green-color);
+}
+.plans.pl-2 li:last-child:before {
+    content: "\f00d";
+    color: var(--red-color);
+}
+.plans.pl-2 li:nth-last-child(2):before {
+    content: "\f00d";
+    color: var(--red-color);
+}
+.plans.pl-3 .head-plan,
+.plans.pl-3 >a {
+    background-color: var(--orange-color);
+    outline-color: var(--orange-color);
+}
+.plans.pl-3 p {
+    width: 100%;
+    text-align: center;
+}
+@media (max-width:767px) {
+    .plans ul {
+        padding: 20px 0;
+    }
+}
+/*##################### The Final #####################*/
+
+
+
+
+
