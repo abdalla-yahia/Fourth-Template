@@ -1845,7 +1845,9 @@ background-color: var(--blue-color);
 ************************ Start Courses Page *******************************
 **************************************************************************
 **************************************************************************/
-.content.cources-content {
+.content.cources-content,
+.content.friends-content
+{
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 .courses {
@@ -1914,4 +1916,94 @@ margin-top: 10px;
     justify-content: space-between;
     padding: 15px;
     color: #777;
+}
+/***********************************************************************
+************************************************************************
+************************ Start Friends Page *******************************
+**************************************************************************
+**************************************************************************/
+.friends.box > span i{
+    color: #777;
+    padding: 10px;
+    background-color: #eee;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.freiend-info {
+    width: 100%;
+    flex-direction: column;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+.freiend-info img {
+    border-radius: 50%;
+    width: 100px;
+    margin-bottom: 10px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.friend-data {
+    padding: 20px;
+    position: relative;
+}
+.friend-data-child {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.friend-data-child::before {
+    content: "\f118";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 400;
+    left: -30px;
+    position: absolute;
+}
+
+.friend-data-child:nth-of-type(2):before {
+content: "\f386";
+font-weight: 900;
+}
+.friend-data-child:nth-of-type(3):before {
+content: "\f1ea";
+font-weight: 900;
+}
+.friend-data > span {
+    color: var(--red-color);
+    font-size: 50px;
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+    font-weight: 700;
+    opacity: .2;
+}
+.friend-data {
+    border-bottom: 1px solid #eee;
+}
+.friend-foot {
+    padding: 20px 0 0 0;
+    justify-content: space-between;
+}
+.friend-foot >span {
+    color: #777;
+    font-size: small;
+}
+.friend-foot a {
+    padding: 6px;
+    background-color: var(--blue-color);
+    border-radius: 10px;
+    font-size: small;
+    color: var(--white-color);
+    margin-left: 5px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.friend-foot a:last-of-type {
+    background-color: var(--red-color);
 }
