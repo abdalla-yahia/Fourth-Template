@@ -1773,17 +1773,20 @@ table tbody tr:last-child td {
 .content-profile .child-2 {
     grid-area: h;
 }
-
+.profile-up {
+    justify-content: flex-start;
+    margin: 10px;
+}
 @media (max-width:768px) {
     .content-profile {
         display: grid;
         grid-template-areas: "pa pa pa pa pa pa " "c c c c c c " "h h h h h h";
     }
-}
-
-.profile-up {
-    justify-content: flex-start;
-    margin: 10px;
+    .profile-up {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .profile-up-side {
@@ -1793,9 +1796,20 @@ table tbody tr:last-child td {
     width: 20%;
     height: 60%;
 }
-
+@media (max-width:768px) { 
+    .profile-up-side { 
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 20px;
+    }
+    .profile-up-side .profile-progres {
+        max-width: 40%;
+    }
+}
 .profile-up-side>img {
     width: 100px;
+    max-width: 100%;
     margin-bottom: 10px;
 }
 
@@ -1805,6 +1819,7 @@ table tbody tr:last-child td {
 
 .profile-progres {
     position: relative;
+    margin: 10px 0;
     width: 80%;
     height: 6px;
     background-color: #eee;
@@ -1837,13 +1852,34 @@ table tbody tr:last-child td {
     color: #777;
 }
 .profile-up-content {
-    flex: 1;
+    flex-basis: 80%;
 }
 .profile-up-content-box {
-    width: 100%;
+    max-width: 100%;
     justify-content: space-between;
     padding:10px 15px;
     height: 100%;
+    position: relative;
+    padding-bottom: 40px;
+}
+@media (max-width:992px) {
+    .profile-up-content-box {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+}
+@media (max-width:768px) { 
+    .profile-up-content-box {
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        padding-bottom: 60px;
+        width: 100%;
+    }
+    .profile-up-content {
+        width: 100%;
+    }
 }
 .profile-up-content-box:not(:last-of-type) {
     border-bottom: 1px solid #eee;
@@ -1865,8 +1901,18 @@ justify-content: space-evenly;
 .on-off-button {
     width: 100%;
     height: 30px;
-    padding-left: 30px;
-    margin: 15px 0;
+    margin: 25px 0;
+    position: absolute;
+    bottom: -20px;
+    left: 15px;
+
+}
+@media (max-width:768px) {
+    .on-off-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
 }
 .on-off-button input {
     display: none;
